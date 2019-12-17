@@ -12,8 +12,8 @@ jobs:
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Docker Build & Push
-      uses: mr-smithers-excellent/docker-build-push@v1.0
-      with: |
+    - uses: mr-smithers-excellent/docker-build-push@v1.0
+      with:
         image: yaqi0714/mvcdocker
         tag: latest
         registry: docker.io
