@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - uses: ./mvcdocker
+    - uses: .
     - name: Publish Docker Action
       uses: jerray/publish-docker-action@v1.0.3
       with:
@@ -24,9 +24,9 @@ jobs:
         # Docker build context
         path: .. # optional, default is .
         # Static image tag list, separated by comma
-        tags: latest # optional, default is latest
+        tags: yaqi0714/mvcdocker:latest # optional, default is latest
         # Docker build-time variables, separated by comma
-        build_args: build . -f ./mvcdocker/dockerfile# optional
+        #build_args: build . -f ./mvcdocker/dockerfile# optional
         # If allow pull request trigger build
         allow_pull_request: true # optional
         # Generate tags by conditions automatically
