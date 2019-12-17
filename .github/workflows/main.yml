@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - name: Docker Build & Push
-    - uses: mr-smithers-excellent/docker-build-push@v1.0
+      uses: mr-smithers-excellent/docker-build-push@v1.0
       with:
         image: yaqi0714/mvcdocker
         tag: latest
