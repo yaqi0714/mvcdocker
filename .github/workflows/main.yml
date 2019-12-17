@@ -17,6 +17,6 @@ jobs:
         image: yaqi0714/mvcdocker
         tag: latest
         registry: docker.io
-        dockerfile: mvcdocker/Dockerfile
+        dockerfile: Dockerfile
         username: yaqi0714
         password: Lyq=890714
