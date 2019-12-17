@@ -20,9 +20,9 @@ jobs:
         # Docker registry server address
         registry: docker.io
         # Docker file used to build image
-        file: Dockerfile
+        file: ./mvcdocker/mvcdocker/Dockerfile
         # Docker build context
-        path: ../ # optional, default is .
+        path: ./ # optional, default is .
         # Static image tag list, separated by comma
         tags: yaqi0714/mvcdocker:latest # optional, default is latest
         # Docker build-time variables, separated by comma
