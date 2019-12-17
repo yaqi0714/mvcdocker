@@ -11,18 +11,26 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - uses: ./
-    - name: Docker Build & Push
-      uses: mr-smithers-excellent/docker-build-push@v1.0
+    - name: Publish Docker Action
+      uses: jerray/publish-docker-action@v1.0.3
       with:
-        # Name of the Docker image
-        image: yaqi0714/mvcdocker
-        # Tag override for Docker image
-        tag: latest # optional
-        # Target Docker registry
-        registry: docker.io
-        # Location of Dockerfile, if not Dockerfile in root directory
-        dockerfile: Dockerfile # optional, default is Dockerfile
-        # Docker registry username
-        username: yaqi0714 # optional
-        # Docker registry password
-        password: Lyq=890714 # optional
+        # Username used to login docker registry
+        username: yaqi0714
+        # Password used to login docker registry
+        password: Lyq=890714
+        # Docker registry server address
+        registry: azurecr.io # optional
+        # Docker file used to build image
+        file: Dockerfile # optional, default is Dockerfile
+        # Docker build context
+        path: ./ # optional, default is .
+        # Static image tag list, separated by comma
+        tags: yaqi0714/mvcdocker:latest # optional, default is latest
+        # Docker build-time variables, separated by comma
+        #build_args: # optional
+        # If allow pull request trigger build
+        allow_pull_request: true # optional
+        # Generate tags by conditions automatically
+        auto_tag: false# optional
+        # Images to consider as cache sources
+        #cache: # optional
