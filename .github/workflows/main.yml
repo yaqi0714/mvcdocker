@@ -15,7 +15,7 @@ jobs:
         version: 2.2.104 # optional
     - name: Checkout
       uses: actions/checkout@v1
-    - uses: ./
+    #- uses: ./
     - name: Publish Docker
       uses: elgohr/Publish-Docker-Github-Action@2.10
       with:
