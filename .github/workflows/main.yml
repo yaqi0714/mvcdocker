@@ -22,9 +22,9 @@ jobs:
         # The name of the image you would like to push
         name: yaqi0714/mvcdocker
         # The login username for the registry
-        username: yaqi0714
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
         # The login password for the registry
-        password: Lyq=890714
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
         # Use registry for pushing to a custom registry
         registry: docker.io # optional
         # Use snapshot to push an additional image
