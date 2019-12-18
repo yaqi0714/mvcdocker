@@ -13,8 +13,8 @@ jobs:
     #  with:
     #    # Version to use. E.g. 2.2.104
     #    version: 2.2.104 # optional
-    #- name: Checkout
-    #  uses: actions/checkout@v1
+    - name: Checkout
+      uses: actions/checkout@v1
     #- uses: ./
     - name: Publish Docker
       uses: elgohr/Publish-Docker-Github-Action@2.10
