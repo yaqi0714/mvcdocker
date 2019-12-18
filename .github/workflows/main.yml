@@ -16,26 +16,16 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - uses: ./
-    - name: Publish Docker Action
-      uses: jerray/publish-docker-action@v1.0.3
+    - name: Docker Action
+      uses: zenato/docker-action@v1.0.0
       with:
-        # Username used to login docker registry
+        # Registry username
         username: yaqi0714
-        # Password used to login docker registry
+        # Registry password
         password: Lyq=890714
-        # Docker registry server address
-        registry: azurecr.io # optional
-        # Docker file used to build image
-        file: Dockerfile # optional, default is Dockerfile
-        # Docker build context
-        path: ./ # optional, default is .
-        # Static image tag list, separated by comma
-        tags: yaqi0714/mvcdocker:latest # optional, default is latest
-        # Docker build-time variables, separated by comma
-        #build_args: # optional
-        # If allow pull request trigger build
-        allow_pull_request: true # optional
-        # Generate tags by conditions automatically
-        auto_tag: false# optional
-        # Images to consider as cache sources
-        #cache: # optional
+        # Repository on registry
+        repository: yaqi0714/mvcdocker
+        # Registry hostname
+        registry: docker.io # optional
+        # Image tag
+        tag: latest # optional
