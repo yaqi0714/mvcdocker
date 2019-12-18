@@ -20,7 +20,7 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@2.10
       with:
         # The name of the image you would like to push
-        name: mvcdocker
+        name: yaqi0714/mvcdocker
         # The login username for the registry
         username: yaqi0714
         # The login password for the registry
