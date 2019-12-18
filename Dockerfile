@@ -1,9 +1,9 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
+FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
 COPY ["mvcdocker/mvcdocker.csproj", "mvcdocker/"]
 RUN dotnet restore "mvcdocker/mvcdocker.csproj"
