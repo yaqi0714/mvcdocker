@@ -16,16 +16,26 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - uses: ./
-    - name: Docker Action
-      uses: zenato/docker-action@v1.0.0
+    - name: Publish Docker
+      uses: elgohr/Publish-Docker-Github-Action@2.10
       with:
-        # Registry username
+        # The name of the image you would like to push
+        name: mvcdocker
+        # The login username for the registry
         username: yaqi0714
-        # Registry password
+        # The login password for the registry
         password: Lyq=890714
-        # Repository on registry
-        repository: yaqi0714/mvcdocker
-        # Registry hostname
+        # Use registry for pushing to a custom registry
         registry: docker.io # optional
-        # Image tag
-        tag: latest # optional
+        # Use snapshot to push an additional image
+        #snapshot: # optional
+        # Use dockerfile when you would like to explicitly build a Dockerfile
+        #dockerfile: # optional
+        # Use workdir when you would like to change the directory for building
+        #workdir: # optional
+        # Use buildargs when you want to pass a list of environment variables as build-args
+        #buildargs: # optional
+        # Use cache when you have big images, that you would only like to build partially
+        #cache: # optional
+        # Use tag_names when you want to push tags/release by their git name
+        #tag_names: # optional
